@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    padding-top: 60px;
+}
+.TheHeader{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 20px 10%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.TheHeader ul{
+    display: flex;
+    gap: 20px;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+.TheHeader a{
+    color: white;
+    text-decoration: none;
+}
+/* !------First Section--- */
+.FirstSection{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background: linear-gradient(41deg,rgba(78, 78, 78, 1) 0%, rgba(142, 142, 142, 1) 100%);
+    color: white;
+    padding-bottom: 4rem;
+    gap: 10px;
+    padding: 50px 10%;
+}
+
+.ContainerImage{
+    overflow: hidden;
+    border-radius: 10px;
+}
+.ImageFirstSection{
+    width: 100%;
+    
+}
+.FirstSection h1{
+    font-size: 40px;
+    padding-top: 50px;
+}
+.ContainerParagraph p{
+   padding-top: 30px;
+   padding-bottom: 20px;
+}
+.bnt{
+    background-color: rgb(46, 204, 113);
+    padding: 10px;
+    border: hidden;
+    color: white;
+    cursor: pointer;
+}
+/* !-------Second Section---------- */
+.SecondSection{
+    background-color: rgb(245, 245, 245);
+    padding: 100px 10%;
+}
+.SecondSection h1{
+    text-align: center;
+    padding-bottom: 30px;
+}
+.ContainerSecondSection{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 15px;
+}
+.BoxSecondSection{
+    border-radius: 6px;
+    padding: 30px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
+    overflow: hidden;
+    
+}
+.Cercle{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    background-color: rgb(213, 244, 226);
+    position: absolute;
+    top: -37px;
+    right: -44px;
+    
+}
+.BoxSecondSection::after{
+   content: "";
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   width: 0;
+   height: 4px;
+   background: rgb(79, 194, 129);
+   transition: width 0.5s ease;
+
+}
+.BoxSecondSection:hover::after{
+    width: 100%;
+    left: 0;
+}
+.BoxSecondSection:hover{
+    transform: translateY(-8px);
+}
+
+/* !----hover- */
+.ContainerSecondSection::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background-color:rgb(79, 194, 129) ;
+    transition:width.2s;
+}
+.ContainerSecondSection:hover::before{
+    width: 100%;
+}
+
+/* !-----Third Section--- */
+.ThirdSection{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    background-color: rgb(245, 245, 245);
+    padding: 20px 10%; 
+    position: relative;
+}
+.ThirdSection p{
+    font-size: 13px;
+    line-height: 2;
+}
+.box{
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 370px;
+    position: relative;
+    /* transition: transform 0.3s ease; */
+}
+.box:hover{
+     /* transform: translateY(4px); */
+     transform: scale(1.01);
+}
+.Badge{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 0px 4px;
+}
+.box img{
+    width: 100%;
+    height: 200px;
+}
+.ParagraphThirdSection{
+    padding: 20px;
+}
+.box1{
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 100px;
+    width: 250px;
+    padding: 20px;
+    position: sticky;
+    top: 120px;
+}
+/* !-----Footer--- */
+.TheFooter{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 20px 10%;
+}
+.TheFooter ul{
+    display: flex;
+    gap: 20px;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+.TheFooter a{
+    color: white;
+    text-decoration: none;
+}
+
+.FixedBtn{
+    border-radius: 50%;
+    background-color: rgb(46, 204, 113);
+    width: fit-content;
+    padding: 10px;
+    color: white;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+.FixedBtn a{
+    color: white;
+}
+
+/* !--------Scroll---- */
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+
+
